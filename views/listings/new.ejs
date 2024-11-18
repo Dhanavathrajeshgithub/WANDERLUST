@@ -1,0 +1,36 @@
+<% layout('./layouts/boilerPlate.ejs') -%>
+
+<div class="row mt-2 mb-2">
+    <div class="col-8 offset-2">
+        <h3>Add Your Location...</h3>
+        <form method="post" action="/listings">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input placeholder="title" class="form-control title" name="list[title]"> 
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+                <textarea placeholder="description" name="list[description]" class="form-control description"></textarea> 
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">price</label>
+                <input placeholder="price" name="list[price]" class="form-control price">
+            </div> 
+            <div class="mb-3">
+                <label for="image" class="form-label">image</label>
+                <input placeholder="image url" name="list[image]" class="form-control image"> 
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="location" class="form-label">location</label>
+                    <input placeholder="location" name="list[location]" class="form-control location"> 
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="country" class="form-label">country</label>
+                    <input placeholder="country" name="list[country]" class="form-control country"> 
+                </div>
+            </div>
+            <button class="edit-btn btn btn-dark">Add</button>
+        </form>
+    </div>
+</div>

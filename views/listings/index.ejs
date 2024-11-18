@@ -1,0 +1,18 @@
+<% layout('./layouts/boilerPlate.ejs') -%>
+<body>
+    <h2>All Listings</h2>
+    <div class="row ">
+        <% for(let list of allList){ %>
+            <div class="card">
+                <a href="/listings/<%=list._id%>">
+                <img src="<%= list.image %>" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                  <p class="card-text"><b><%= list.title %></b>
+                    <br> &#8377; <%=list.price.toLocaleString("en-IN")%>/night
+                  </p>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>

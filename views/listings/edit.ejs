@@ -1,0 +1,36 @@
+<% layout('./layouts/boilerPlate.ejs') -%>
+<body>
+    <div class="row mt-2 mb-2">
+        <div class="col-8 offset-2">
+            <h3>Edit your place...</h3>
+            <form method="post" action="/listings/<%=list._id%>?_method=patch">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input name="list[title]" value="<%=list.title%>" class="form-control title"> 
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">description</label>
+                    <textarea placeholder="description" name="list[description]" class="form-control description"><%=list.description%></textarea> 
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">price</label>
+                    <input placeholder="price" name="list[price]" class="form-control price" value="<%=list.price%>">
+                </div> 
+                <div class="mb-3">
+                    <label for="image" class="form-label">image</label>
+                    <input placeholder="image url" name="list[image]" class="form-control image" value="<%=list.image%>"> 
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="location" class="form-label">location</label>
+                        <input placeholder="location" name="list[location]" class="form-control location" value="<%=list.location%>"> 
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="country" class="form-label">country</label>
+                        <input placeholder="country" name="list[country]" class="form-control country" value="<%=list.country%>"> 
+                    </div>
+                </div>
+                <button class="edit-btn btn btn-dark">Edit</button>
+            </form>
+        </div>
+</body>
